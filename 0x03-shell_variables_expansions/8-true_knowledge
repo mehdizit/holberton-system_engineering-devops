@@ -1,0 +1,2 @@
+#!/bin/var
+echo $((TRUEKNOWLEDGE + 128))
