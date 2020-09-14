@@ -1,0 +1,17 @@
+total 60
+drwxr-xr-x 2 mahdi mahdi 4096 سبتمب 13 14:16 .
+drwxr-xr-x 6 mahdi mahdi 4096 سبتمب 12 02:57 ..
+-rwxr--r-- 1 mahdi mahdi   36 سبتمب 12 03:48 0-hello_world
+-rwxr--r-- 1 mahdi mahdi   27 سبتمب 12 10:43 1-confused_smiley
+-rwxr--r-- 1 mahdi mahdi   31 سبتمب 12 21:55 2-hellofile
+-rwxr--r-- 1 mahdi mahdi   39 سبتمب 12 22:05 3-twofiles
+-rwxr--r-- 1 mahdi mahdi   29 سبتمب 13 00:16 4-lastlines
+-rwxr--r-- 1 mahdi mahdi   29 سبتمب 13 00:22 5-firstlines
+-rwxr--r-- 1 mahdi mahdi   28 سبتمب 13 00:33 6-third_line
+-rwxr--r-- 1 mahdi mahdi  106 سبتمب 13 14:02 7-file
+-rwxr--r-- 1 mahdi mahdi   87 سبتمب 13 01:30 7-file~
+-rwxr--r-- 1 mahdi mahdi   42 سبتمب 13 14:16 8-cwd_state
+-rw-r--r-- 1 mahdi mahdi   18 سبتمب 13 14:02 \*\\"Holberton School"\\\\*$\?\*\*\*\*:)
+-rwxr--r-- 1 mahdi mahdi  801 سبتمب 13 00:30 iacta
+-rw-r--r-- 1 mahdi mahdi    0 سبتمب 13 14:16 ls_cwd_content
+-rw-r--r-- 1 mahdi mahdi   86 سبتمب 12 03:39 README.md
