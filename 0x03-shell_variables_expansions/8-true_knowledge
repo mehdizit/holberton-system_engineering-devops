@@ -1,2 +1,2 @@
 #!/bin/var
-echo $((TRUEKNOWLEDGE + 128))
+echo $(($TRUEKNOWLEDGE + 128))
