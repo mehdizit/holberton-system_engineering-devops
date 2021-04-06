@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configures Ngninx server to redirect to another page
+sudo apt-get update -y
+sudo apt-get install -y nginx
+REDIRECT_STRING="location /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=ibIjlXSagME&t=2s&ab_channel=LeCERA;\n\t}"
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+service nginx start
+sudo sed -i "30i $REDIRECT_STRING" /etc/nginx/sites-available/default
+sudo service nginx restart
