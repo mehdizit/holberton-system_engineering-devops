@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Installs HAProxy version 1.8 with the following configurations:
+
+sudo apt -y update
+sudo apt-get -y install software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-1.8
+sudo apt -y update
+apt-get install haproxy=1.8.\*
+sudo chown -R "$USER":"$USER" /etc/default/haproxy
+sudo chown -R "$USER":"$USER" /etc/haproxy
+sudo echo "listen 2151-lb-01" >> /etc/haproxy/haproxy.cfg
+sudo echo "    bind 0:80" >> /etc/haproxy/haproxy.cfg
+sudo echo "	stats enable" >> /etc/haproxy/haproxy.cfg
+sudo echo "	balance roundrobin" >> /etc/haproxy/haproxy.cfg
+sudo echo "	server 2151-web-01 35.190.130.61 check port 80" >> /etc/haproxy/haproxy.cfg
+sudo echo "    server 2151-web-02 34.75.80.235 check port 80" >> /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
