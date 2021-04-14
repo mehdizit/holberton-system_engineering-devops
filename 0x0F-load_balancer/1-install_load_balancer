@@ -6,6 +6,7 @@ sudo apt-get -y install software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-1.8
 sudo apt -y update
 sudo apt-get install haproxy=1.8.\*
+sudo echo "ENABLED=1" | sudo tee /etc/default/haproxy
 sudo chown -R "$USER":"$USER" /etc/default/haproxy
 sudo chown -R "$USER":"$USER" /etc/haproxy
 sudo echo "listen 2151-lb-01" | sudo tee /etc/haproxy/haproxy.cfg
