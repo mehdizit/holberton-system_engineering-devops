@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Installs HAProxy version 1.8 with the following configurations:
+# Installs HAProxy version 1.8 with the following configurations
 
 sudo apt -y update
 sudo apt-get -y install software-properties-common
@@ -13,6 +13,6 @@ sudo echo "listen 2151-lb-01" | sudo tee /etc/haproxy/haproxy.cfg
 sudo echo "    bind 0:80" | sudo tee /etc/haproxy/haproxy.cfg
 sudo echo "    stats enable" | sudo tee /etc/haproxy/haproxy.cfg
 sudo echo "    balance roundrobin" | sudo tee /etc/haproxy/haproxy.cfg
-sudo echo "    server 2151-web-01 35.190.130.61 check port 80" | sudo tee /etc/haproxy/haproxy.cfg
-sudo echo "    server 2151-web-02 34.75.80.235 check port 80" | sudo tee /etc/haproxy/haproxy.cfg
+sudo echo "    server 2151-web-01 35.190.130.61 : 80 check" | sudo tee /etc/haproxy/haproxy.cfg
+sudo echo "    server 2151-web-02 34.75.80.235 : 80 check" | sudo tee /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
