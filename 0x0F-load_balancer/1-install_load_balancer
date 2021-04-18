@@ -9,10 +9,17 @@ sudo apt-get install haproxy=1.8.\*
 sudo echo "ENABLED=1" | sudo tee /etc/default/haproxy
 sudo chown -R "$USER":"$USER" /etc/default/haproxy
 sudo chown -R "$USER":"$USER" /etc/haproxy
-sudo echo "listen 2151-lb-01" | sudo tee /etc/haproxy/haproxy.cfg
-sudo echo "    bind 0:80" | sudo tee /etc/haproxy/haproxy.cfg
-sudo echo "    stats enable" | sudo tee /etc/haproxy/haproxy.cfg
-sudo echo "    balance roundrobin" | sudo tee /etc/haproxy/haproxy.cfg
-sudo echo "    server 2151-web-01 35.190.130.61 :80 check" | sudo tee /etc/haproxy/haproxy.cfg
-sudo echo "    server 2151-web-02 34.75.80.235 :80 check" | sudo tee /etc/haproxy/haproxy.cfg
+echo "
+frontend http
+  bind *:80
+  mode http
+  default_backend web-backend
+  
+backend web-backend
+  mode http
+  balance roundrobin
+  server 2151-web-01 35.190.130.61 :80
+  server 2151-web-02 34.75.80.235 :80
+  " >> /etc/haproxy/haproxy.cfg
+
 sudo service haproxy restart
