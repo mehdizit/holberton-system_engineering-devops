@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
-# Installs HAProxy version 1.8 with the following configurations
+# Installs HAProxy with the following configurations
+sudo apt-get -y update
+sudo apt-get -y install haproxy
 
-sudo apt-get -y update
-sudo apt-get -y install software-properties-common
-sudo add-apt-repository ppa:vbernat/haproxy-1.8
-sudo apt-get -y update
-sudo apt-get install haproxy=1.8.\*
 sudo echo "ENABLED=1" | sudo tee /etc/default/haproxy
 sudo chown -R "$USER":"$USER" /etc/default/haproxy
 sudo chown -R "$USER":"$USER" /etc/haproxy
