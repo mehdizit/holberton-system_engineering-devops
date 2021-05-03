@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """iven employee ID, returns information about his/her todo list progress."""
 
-import urllib.request
 import requests
 import sys
 
