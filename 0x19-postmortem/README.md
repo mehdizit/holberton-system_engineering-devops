@@ -1,0 +1,1 @@
+Postmortem for Holberton Project Below is a postmortem for a webstack debugging assignment for Holberton School. A simple website utilizing was returning a 500 status code to any GET requests. Students were tasked with identifying the problem and creating a Puppet script for the solution.
